@@ -75,7 +75,7 @@ get_header();
 	</section>
 
     <?php
-    // I will utilize following hook and add case study section from plugin here.
+    // I will utilize following action hook and add case study section from plugin here.
     do_action( 'nuvra_front_page_before_footer' );
     ?>
 </main>
