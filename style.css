@@ -7,3 +7,75 @@ Author URI:     https://github.com/ahmad4372/
 Template:       storefront
 Version:        0.1.0
 */
+
+.grids {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    row-gap: 16px;
+    column-gap: 32px;
+    align-items: start;
+}
+
+.grid {
+    margin: 0 0 0 0;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 300ms ease-in-out;
+}
+
+.grid:hover {
+    box-shadow: 3px 3px 5px 0 #ddd;
+}
+
+.grid .grid__thumbnail {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-bottom: 1px solid #ddd;
+}
+
+.grid .grid__thumbnail img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    margin: 0 0 0 0;
+    transition: scale 300ms ease-in-out;
+}
+
+.grid:hover .grid__thumbnail img {
+    scale: 1.2;
+}
+
+.grid .grid__content {
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.grid .grid__content > * {
+    margin: 0 0 0 0;
+}
+
+.grid .grid__link::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    content: "";
+}
+
+@media (width >= 768px) {
+    .grids {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (width >= 1024px) {
+    .grids {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}

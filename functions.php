@@ -21,3 +21,8 @@ function nuvra_task_parent_theme_enqueue_styles() {
 		'0.1.0'
 	);
 }
+
+
+add_filter( 'excerpt_length', function() {
+	return 20;
+} );
