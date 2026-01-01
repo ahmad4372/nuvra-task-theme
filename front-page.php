@@ -59,7 +59,7 @@ get_header();
 					}
 					?>
 				</div>
-                <a href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>" class="button"><?php esc_html_e( 'View all posts', 'nuvra-task' ); ?></a>
+                <a href="<?php echo esc_url( get_permalink( get_option( 'page_for_posts' ) ) ); ?>" class="button hentry"><?php esc_html_e( 'View all posts', 'nuvra-task' ); ?></a>
 				<?php
 			} else {
                 ?>
